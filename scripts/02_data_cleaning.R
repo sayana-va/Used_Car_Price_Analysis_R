@@ -9,3 +9,5 @@
  data$make <- as.factor(data$make)
 
  data$model <- as.factor(data$model)
+ 
+ str(data)
