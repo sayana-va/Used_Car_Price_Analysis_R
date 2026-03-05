@@ -6,8 +6,19 @@ library(lubridate)
 
 data <- read.csv(file.choose(), stringsAsFactors = FALSE)
 
-head(data)
-str(data)
-summary(data)
-dim(data)
-names(data)
+# Preview data
+head(car_data)
+
+# Dataset structure
+str(car_data)
+
+# Summary statistics
+summary(car_data)
+
+# Dataset size
+dim(car_data)
+
+# Column names
+names(car_data)
+
+
