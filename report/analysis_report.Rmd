@@ -25,3 +25,20 @@ Missing values were removed and data types were converted.
 
 ```{r}
 summary(car_data)
+
+# Exploratory Data Analysis
+
+# Top selling brands:
+brand_sales <- car_data %>%
+  count(make) %>%
+  arrange(desc(n))
+
+head(brand_sales)
+
+# Visualization
+ggplot(car_data, aes(x=odometer, y=sellingprice)) +
+geom_point(alpha=0.4) 
+
+#Prediction Model
+price_model <- lm(sellingprice ~ year + odometer, data = car_data)
+summary(price_model)
