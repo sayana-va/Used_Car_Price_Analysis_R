@@ -1,12 +1,22 @@
 library(dplyr)
-brand_sales <- data %>%
+
+# Count cars by brand
+brand_sales <- car_data %>%
   count(make) %>%
   arrange(desc(n))
 
- head(brand_sales)
+head(brand_sales)
 
-avg_price <- data %>%
+# Average price by brand
+avg_price <- car_data %>%
   group_by(make) %>%
-  summarise(avg_price = mean(price, na.rm = TRUE))
+  summarise(avg_price = mean(sellingprice, na.rm = TRUE))
 
-avg_price
+head(avg_price)
+
+# Cars sold by year
+year_sales <- car_data %>%
+  count(year) %>%
+  arrange(desc(n))
+
+head(year_sales)
