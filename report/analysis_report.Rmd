@@ -1,1 +1,27 @@
+---
+title: "Used Car Price Analysis"
+author: "sayana"
+date: "`r Sys.Date()`"
+output: html_document
+---
 
+# Introduction
+
+This project analyzes used car sales data to understand pricing trends and build a price prediction model.
+
+# Dataset
+
+The dataset contains information about used cars including:
+
+- brand
+- model
+- year
+- mileage
+- selling price
+
+# Data Cleaning
+
+Missing values were removed and data types were converted.
+
+```{r}
+summary(car_data)
