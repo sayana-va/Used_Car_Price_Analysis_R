@@ -19,3 +19,5 @@ ggplot(car_data, aes(x=odometer, y=sellingprice)) +
   labs(title="Car Price vs Mileage",
        x="Mileage",
        y="Selling Price")
+#save plot
+ggsave("output/plots/price_vs_mileage.png") 
