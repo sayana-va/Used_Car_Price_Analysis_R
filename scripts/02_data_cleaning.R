@@ -1,13 +1,17 @@
- data <- na.omit(data)
- data
- data$year <- as.numeric(data$year)
+library(dplyr)
 
- data$price <- as.numeric(data$sellingprice)
+# Remove missing values
+car_data <- na.omit(car_data)
 
- data$odometer <- as.numeric(data$odometer)
+# Convert data types
+car_data$year <- as.numeric(car_data$year)
+car_data$odometer <- as.numeric(car_data$odometer)
+car_data$sellingprice <- as.numeric(car_data$sellingprice)
 
- data$make <- as.factor(data$make)
+# Convert categorical variables
+car_data$make <- as.factor(car_data$make)
+car_data$model <- as.factor(car_data$model)
+car_data$body <- as.factor(car_data$body)
 
- data$model <- as.factor(data$model)
- 
- str(data)
+# Check structure again
+str(car_data)
